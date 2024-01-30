@@ -26,7 +26,11 @@
 typedef _Bool bool;
 #else
 /* do not have a C99 compiler */
+#ifdef __ppc__
+typedef unsigned int bool;
+#else
 typedef unsigned char bool;
+#endif
 #endif
 
 
